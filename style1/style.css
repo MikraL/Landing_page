@@ -1,0 +1,419 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+/*
+color
+orange : #fb8500
+bleu foncé : #264653
+
+*/
+body {
+  background: linear-gradient(-45deg, #fb8500, #df7700, #af5d00, red);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #223b46;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #af5d00;
+}
+
+/*mixin*/
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*header*/
+header {
+  width: 100%;
+  z-index: 1000;
+}
+header nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #264653;
+  padding: 10px;
+  box-shadow: 0px 3px rgb(49, 49, 49);
+}
+header nav .logo_a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+}
+header nav .logo_a .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: #fb8500;
+  border-radius: 50%;
+}
+header nav .buttonswitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fb8500;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 20px 10px 10px;
+  transition: all 0.5s;
+}
+header nav .buttonswitch svg {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(1) invert(1);
+  transition: all 0.2s;
+}
+header nav .buttonswitch:hover {
+  background-color: #df7700;
+  transition: all 0.5s;
+}
+header nav .buttonswitch:hover svg {
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s;
+}
+header nav .buttonswitch:active {
+  background-color: #264653;
+}
+header nav .dark {
+  background-color: #fb8500;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .dark svg {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(1) invert(1);
+  transition: all 0.2s;
+}
+header nav .dark:hover {
+  background-color: #df7700;
+  transition: all 0.5s;
+}
+header nav .dark:hover svg {
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+}
+header nav ul a {
+  margin: auto 10px;
+  border-radius: 50%;
+  height: auto;
+  border: 3px solid #264653;
+}
+header nav ul a li {
+  display: flex;
+  justify-content: space-between;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+header nav ul a .facebook {
+  background-image: url(../utils/img/facebook.png);
+  background-size: cover;
+}
+header nav ul a .insta {
+  background-image: url(../utils/img/instagram.png);
+  background-size: cover;
+}
+header nav ul a .linkdin {
+  background-image: url(../utils/img/linkdin.png);
+  background-size: cover;
+}
+header nav ul a .email {
+  background-image: url(../utils/img/email.png);
+  background-size: cover;
+}
+header nav ul a:hover {
+  border: 3px solid #fb8500;
+}
+header .telephone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+  background-color: #fb8500;
+  color: #fff;
+  padding: 10px 0;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid #264653;
+  transition: background-color 0.5s, color 0.4s;
+}
+header .telephone:hover {
+  background-color: #df7700;
+  transition: background-color 0.5s, color 0.4s;
+}
+
+/*main*/
+main {
+  height: 900px;
+  padding-top: 100px;
+  margin: auto 5%;
+}
+main .title {
+  font-size: 30px;
+  width: 70%;
+  text-align: center;
+  background-color: #264653;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 30px;
+  color: white !important;
+  text-shadow: 2px 2px black;
+  box-shadow: 4px 4px rgb(49, 49, 49);
+  transition: all 0.2s;
+}
+main .title:hover {
+  box-shadow: 7px 7px 1px rgb(49, 49, 49);
+  text-shadow: 2px 2px rgb(34, 34, 34);
+  transition: all 0.2s;
+}
+main .conteneur .avantages {
+  width: 50%;
+  float: left;
+  height: auto;
+}
+main .conteneur .avantages ul {
+  margin: auto 10%;
+}
+main .conteneur .avantages ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  background-color: #264653;
+  margin: 10px 0;
+  border-radius: 30px;
+  box-shadow: 4px 4px rgb(49, 49, 49);
+  transition: all 1s;
+}
+main .conteneur .avantages ul li svg {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(1) invert(1);
+}
+main .conteneur .avantages ul li p {
+  display: none;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.452);
+  margin: 10px;
+  border-radius: 20px;
+  max-height: 100px;
+  transition: none;
+  font-size: 15px;
+}
+main .conteneur .avantages ul li:hover {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  background-color: #223b46;
+  transition: all 0.5s;
+}
+main .conteneur .avantages ul li:hover svg {
+  width: 0px;
+  height: 0px;
+  transition: all 0.5s;
+}
+main .conteneur .avantages ul li:hover p {
+  display: block;
+}
+main .conteneur form {
+  flex-direction: column;
+  width: 40%;
+  min-width: 500px;
+  background-color: #264653;
+  float: right;
+  height: auto;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 4px 4px rgb(49, 49, 49);
+  transition: all 0.2s;
+}
+main .conteneur form label {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px;
+}
+main .conteneur form .firstname {
+  width: 50%;
+  float: left;
+  height: auto;
+  padding: 0 35px 0 35px;
+}
+main .conteneur form .lastname {
+  width: 50%;
+  float: right;
+  height: auto;
+  padding: 0 35px 0 35px;
+}
+main .conteneur form .column {
+  margin-top: 50px;
+  padding: 0 30px 0 30px;
+}
+main .conteneur form .column div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: #264653;
+}
+main .conteneur form .column div input {
+  width: 100%;
+}
+main .conteneur form .column div textarea {
+  height: 100px;
+}
+main .conteneur form .column #submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .conteneur form input {
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+main .conteneur form textarea {
+  border-radius: 20px;
+  padding: 20px;
+}
+main .conteneur form:hover {
+  box-shadow: 7px 7px 1px rgb(49, 49, 49);
+  transition: all 0.2s;
+}
+main .conteneur .rights {
+  float: right !important;
+  transition: all 1s;
+}
+main .conteneur .lefts {
+  float: left !important;
+  transition: all 1s;
+}
+
+/*footer*/
+/*mediaqueries*/
+@media screen and (max-width: 600px) {
+  header nav ul {
+    width: 250px;
+  }
+  header nav ul a {
+    margin: auto 5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header nav .telephone {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .title {
+    font-size: 10px;
+  }
+  main .conteneur {
+    flex-direction: column;
+  }
+  main .conteneur .avantages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    float: none;
+  }
+  main .conteneur .avantages ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+  }
+  main .conteneur .avantages ul li:hover {
+    flex-direction: column;
+    height: auto;
+  }
+  main .conteneur .avantages ul li:hover p {
+    font-size: 10px;
+  }
+  main .conteneur form {
+    width: 100%;
+    max-width: 600px;
+    float: none;
+  }
+  main .conteneur .lefts {
+    float: none;
+  }
+  main .conteneur .rights {
+    float: none;
+  }
+}/*# sourceMappingURL=style.css.map */
